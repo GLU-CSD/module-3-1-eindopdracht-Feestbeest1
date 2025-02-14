@@ -1,0 +1,22 @@
+
+
+
+ul.a{
+    list-style-type: square;
+}
+
+ol.d {
+    list-style-type: lower-alpha;
+  }
+
+  li b{
+    float: left;
+  }
+
+li b{
+        display: block;
+        color: rgb(255, 0, 0);
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+}
