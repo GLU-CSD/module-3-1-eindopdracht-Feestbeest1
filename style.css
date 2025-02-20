@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth; /* Zorgt voor vloeiende scroll-animatie */
+}
+
 body { 
     font-family: Arial, sans-serif; 
     margin: 0; 
@@ -11,93 +15,252 @@ header {
     padding: 20px; 
     color: #fff; 
     display: flex; 
-    justify-content: space-between; 
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+    padding-left: 20px;
     align-items: center; 
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
 }
 
 header nav a { 
     color: #ffffff; 
     text-decoration: none; 
     margin: 0 15px; 
+    font-size: 18px;
 }
+
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif; 
+    font-size: 3em; 
+    color: #1A1F36; 
+    text-align: center; 
+    margin-top: 50px; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); 
+}
+
+
 
 .hero {
     position: relative;
-    background: url('image copy 2.png') no-repeat center center;
-    background-size: 70%; /* Zorgt ervoor dat de afbeelding altijd de sectie vult */
-    color: #ffffff;
-    text-align: center;
-    height: 100vh; /* Maakt de afbeelding zo groot als het scherm */
-    overflow: hidden;
+    background: url('assets/img/image\ copy\ 2.png') no-repeat center center;
+    background-size: cover; 
+    height: 100vh; 
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
+}
+
+.hero a {
+    text-decoration: none;
+}
+
+.all:hover {
+    background-color: #333;
 }
 
 .hero::before {
     content: '';
     position: absolute;
-    top: 86px;
-    left: 228px;
-    width: 70%;
-    height: 77%;
-    background: rgba(0, 0, 0, 0.5); /* Maakt de afbeelding donkerder */
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* M-aakt de afbeelding donkerder */
     z-index: 1;
 }
 
-.hero h1 {
+.all{
+    font-size: 35px;
+    color: white;
+    background-color:black;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
     position: relative;
     z-index: 2;
-    font-size: 3em;
-    color: #fff;
 }
 
-
-
-.hero h1 {
-    position: relative;
-    z-index: 2;
-    font-size: 3em;
-    margin: 0;
-    color: #fff;
-    margin: 0;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-
-
-
-.section { 
-    padding: 50px 20px; 
+.freeweight { 
+    padding-top: 100px; 
     text-align: center; 
+    font-size: 2em; 
+    color: #1A1F36;  
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); 
 }
 
 .products { 
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    gap: 20px; 
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.product:hover {
+    transform: scale(1.05);
 }
 
-.product { 
-    background: #fff; 
-    padding: 20px; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+.product {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+    height: 400px;
+    transition: transform 0.2s ease-in-out;
 }
 
-.product img { 
-    width: 100%; 
-    border-radius: 10px; 
+
+
+.product img {
+    width: 100%;
+    max-width: 300px;
+    max-height: 170px;
+    object-fit: contain;
+    border-radius: 10px;
 }
 
-.product h3 { 
-    margin: 15px 0 10px; 
+.product h3 {
+    font-size: 24px;
+    margin: 10px 0;
+    flex-grow: 1;
+    min-height: 70px; /* Zorgt ervoor dat alle titels even hoog staan */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-footer { 
-    background: #2C3E50; 
-    color: #fff; 
-    text-align: center; 
-    padding: 20px; 
+
+.product p {
+    font-size: 20px;
+    color: #1A1F36; 
 }
+
+.product button {
+    padding: 10px 15px;
+    border: none;
+    background: #1A1F36;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: auto;
+}
+
+.product button:hover {
+    background: #2C3E50;
+}
+
+.about, .contact {
+    background: white;
+    text-align: center;
+    padding: 40px 50px;
+    margin-top: 50px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.about h2, .contact h2 {
+    margin-top: 10px; 
+}
+
+.about p, .contact p {
+    padding-top: 0px;
+}
+
+form {
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    max-width: 500px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center; /* Centers the button horizontally */
+}
+
+
+form button {
+    float: left;
+    float: right; 
+    margin-left: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #1A1F36;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #2C3E50;
+}
+
+
+footer {
+    background: #2C3E50;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+#sidebar {
+    width: 200px;
+    background-color: #1A1F36; 
+    padding-top: 30px; 
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2); 
+    z-index: 999;   
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+#sidebar ul li a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.products-container {
+    display: flex;
+}
+
+.Items {
+    padding: 20px;
+}
+
+
+
+
