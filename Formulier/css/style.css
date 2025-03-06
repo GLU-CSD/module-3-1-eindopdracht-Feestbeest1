@@ -21,23 +21,43 @@ p {
 
 header {
     background: #1A1F36; 
-    padding: 15px 20px;
     color: #fff; 
     display: flex; 
     justify-content: space-between;
     align-items: center; 
+    height: 100px;
 }   
 
-header nav a { 
+.logo {
+    width: 160px; 
+    height: 160px; 
+    display: block;
+}
+
+.logohoek {
+    display: flex;
+}
+
+header nav a {
     color: #ffffff; 
     text-decoration: none; 
-    margin: 0 15px; 
     font-size: 18px;
 }
 
-header svg {
-    height: 70px;
-    width: auto;
+header nav a:hover {
+    text-decoration: underline;
+}
+
+header nav {
+    display: flex;
+    gap: 15px; 
+}
+
+h1 {
+    font-size: 2.3em; 
+    margin: 0; 
+    margin-left: 40px;
+    color: rgb(255, 255, 255);
 }
 
 h2 {
@@ -82,6 +102,13 @@ footer {
     padding: 20px;
     margin-top: 10px;
 }
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
 
 
 

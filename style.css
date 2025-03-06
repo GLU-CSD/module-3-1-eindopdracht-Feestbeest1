@@ -16,11 +16,17 @@ header {
     display: flex; 
     justify-content: space-between;
     align-items: center; 
+    height: 100px;
 }   
 
 .logo {
-    width: 160px; /* Verklein de breedte van het logo */
-    height: 160px; /* Verklein de hoogte van het logo */        
+    width: 160px; 
+    height: 160px; 
+    display: block;
+}
+
+.logohoek {
+    display: flex;
 }
 
 header nav a {
@@ -41,7 +47,8 @@ header nav {
 h1 {
     font-size: 2.3em; 
     margin: 0; 
-    margin-left: -950px;
+    margin-left: 40px;
+    color: rgb(255, 255, 255);
 }
 
 
@@ -144,7 +151,7 @@ h2 {
     font-size: 24px;
     margin: 10px 0;
     flex-grow: 1;
-    min-height: 70px; /* Zorgt ervoor dat alle titels even hoog staan */
+    min-height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -194,7 +201,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    text-align: center; /* Centers the button horizontally */
+    text-align: center; 
 }
 
 
@@ -237,7 +244,7 @@ footer {
 }
 
 #sidebar {
-    position: fixed;  /* Sidebar blijft aan de zijkant van het scherm */
+    position: fixed;  
     top: 0;
     left: 0;
     width: 250px;
@@ -245,8 +252,8 @@ footer {
     background-color: #1A1F36;
     padding-top: 20px;
     box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
-    z-index: 9999;  /* Zorgt ervoor dat de sidebar boven andere elementen ligt */
-    transition: transform 0.3s ease-in-out; /* Animatie voor de sidebar */
+    z-index: 9999; 
+    transition: transform 0.3s ease-in-out; 
 }
 #sidebar ul {
     list-style: none;
@@ -268,9 +275,9 @@ footer {
     background-color: #333;
 }
 
-/* Als de sidebar verborgen is, kun je deze met een transform verschuiven */
+
 #sidebar.hidden {
-    transform: translateX(-100%);  /* Sidebar naar links buiten het scherm schuiven */
+    transform: translateX(-100%);  
 }
 
 #sidebar-toggle {
@@ -281,6 +288,7 @@ footer {
     cursor: pointer;
     padding: 10px;
 }
+
 header nav.active {
     display: flex;
     flex-direction: column;
@@ -295,12 +303,12 @@ header nav.active {
 .menu-container {
     display: flex;
     align-items: center;
-    gap: 20px; /* Ruimte tussen de navigatie en de menuknop */
+    gap: 20px; 
 }
 
-/* Responsieve aanpassingen: Sidebar sluit automatisch op kleinere schermen */
+
 @media (max-width: 768px) {
     #sidebar {
-        width: 200px;  /* Kleinere breedte op kleinere schermen */
+        width: 200px;  
     }
 }
