@@ -12,13 +12,16 @@ body {
 
 header {
     background: #1A1F36; 
-    padding: 15px 20px;
     color: #fff; 
     display: flex; 
     justify-content: space-between;
     align-items: center; 
 }   
 
+.logo {
+    width: 160px; /* Verklein de breedte van het logo */
+    height: 160px; /* Verklein de hoogte van het logo */        
+}
 
 header nav a {
     color: #ffffff; 
@@ -32,7 +35,13 @@ header nav a:hover {
 
 header nav {
     display: flex;
-    gap: 15px; /* Ruimte tussen de links */
+    gap: 15px; 
+}
+
+h1 {
+    font-size: 2.3em; 
+    margin: 0; 
+    margin-left: -950px;
 }
 
 
