@@ -1,41 +1,40 @@
 html {
-    scroll-behavior: smooth; /* Zorgt voor vloeiende scroll-animatie */
+    scroll-behavior: smooth; 
 }
 
 body { 
-    font-family: Arial, sans-serif; 
+    font-family: 'Playfair Display', serif;
     margin: 0; 
     padding: 0; 
     background: #f5f5f5; 
     color: #333; 
 }
 
-header { 
+header {
     background: #1A1F36; 
-    padding: 20px; 
+    padding: 15px 20px;
     color: #fff; 
     display: flex; 
-    display: flex;
     justify-content: space-between;
-    gap: 20px; 
-    padding-left: 20px;
     align-items: center; 
-    top: 0;
-    z-index: 1000;
-    box-sizing: border-box;
-}
+}   
 
-header nav a { 
+
+header nav a {
     color: #ffffff; 
     text-decoration: none; 
-    margin: 0 15px; 
     font-size: 18px;
 }
-
 
 header nav a:hover {
     text-decoration: underline;
 }
+
+header nav {
+    display: flex;
+    gap: 15px; /* Ruimte tussen de links */
+}
+
 
 h2 {
     font-family: 'Playfair Display', serif; 
@@ -51,14 +50,13 @@ h2 {
 
 
 .hero {
-    position: relative;
     background: url('assets/img/image\ copy\ 2.png') no-repeat center center;
     background-size: cover; 
     height: 100vh; 
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    position: relative;
 }
 
 .hero a {
@@ -66,7 +64,7 @@ h2 {
 }
 
 .all:hover {
-    background-color: #333;
+    background: rgb(86, 83, 83);
 }
 
 .hero::before {
@@ -74,19 +72,19 @@ h2 {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* M-aakt de afbeelding donkerder */
-    z-index: 1;
+    background: rgba(0, 0, 0, 0.5); 
 }
 
 .all{
     font-size: 35px;
-    color: white;
-    background-color:black;
+    color: rgb(255, 255, 255);
+    background-color:#1A1F36; 
     border: none;
     padding: 15px 30px;
     cursor: pointer;
-    position: relative;
+    position: relative; 
     z-index: 2;
+    border-radius: 7px;
 }
 
 .freeweight { 
@@ -104,7 +102,8 @@ h2 {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
     gap: 20px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 50px auto;
+    padding: 20px;
 }
 .product:hover {
     transform: scale(1.05);
@@ -119,12 +118,10 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
     height: 400px;
     transition: transform 0.2s ease-in-out;
 }
-
-
 
 .product img {
     width: 100%;
@@ -151,14 +148,13 @@ h2 {
 }
 
 .product button {
-    padding: 10px 15px;
-    border: none;
     background: #1A1F36;
     color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 5px;
-    margin-top: auto;
 }
 
 .product button:hover {
@@ -199,11 +195,14 @@ form button {
     margin-left: 20px;
 }
 
+
+
 input, textarea {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 12px;
+    margin: 8px 0;
     border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 button {
@@ -229,19 +228,22 @@ footer {
 }
 
 #sidebar {
-    width: 200px;
-    background-color: #1A1F36; 
-    padding-top: 30px; 
-    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2); 
-    z-index: 999;   
+    position: fixed;  /* Sidebar blijft aan de zijkant van het scherm */
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #1A1F36;
+    padding-top: 20px;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+    z-index: 9999;  /* Zorgt ervoor dat de sidebar boven andere elementen ligt */
+    transition: transform 0.3s ease-in-out; /* Animatie voor de sidebar */
 }
-
 #sidebar ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
 
 #sidebar ul li a {
     display: block;
@@ -253,14 +255,43 @@ footer {
     transition: background-color 0.3s ease;
 }
 
-.products-container {
+#sidebar ul li a:hover {
+    background-color: #333;
+}
+
+/* Als de sidebar verborgen is, kun je deze met een transform verschuiven */
+#sidebar.hidden {
+    transform: translateX(-100%);  /* Sidebar naar links buiten het scherm schuiven */
+}
+
+#sidebar-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+header nav.active {
     display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #1A1F36;
+    width: 150px;
+    text-align: center;
 }
 
-.Items {
-    padding: 20px;
+.menu-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Ruimte tussen de navigatie en de menuknop */
 }
 
-
-
-
+/* Responsieve aanpassingen: Sidebar sluit automatisch op kleinere schermen */
+@media (max-width: 768px) {
+    #sidebar {
+        width: 200px;  /* Kleinere breedte op kleinere schermen */
+    }
+}

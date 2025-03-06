@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>workshop_2</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"> <!-- Luxurious font -->
+</head>
+<body>
+    <header>
+        <h1>FitGym</h1>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="#about">About us</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div id="container">
+        <form action="doelbestand.php" method="post">
+            <div class="coolblue_titel">
+                <h2>YOUR DETAILS</h2>
+                <p>What should be on the invoice?</p>
+            </div>
+
+            <div class="rij">
+                <div class="kolom1">Order type </div>
+                <div class="kolom2">
+                    <input type="radio" id="individual" name="type" value="individual">
+                    <label for="individual">Individual</label>
+                    <input type="radio" id="business" name="type" value="business">
+                    <label for="business">Business</label><br>
+                </div>
+            </div>
+            <div class="rij">
+                <div class="kolom1">Salutation </div>
+                <div class="kolom2">
+                    <input type="radio" id="Mr." name="type" value="Mr.">
+                    <label for="Mr.">Mr.</label>
+                    <input type="radio" id="Ms." name="type" value="Ms.">
+                    <label for="Ms.">Ms.</label><br>
+                </div>
+            </div>
+            <div class="rij">
+                <div class="kolom1">First name </div>
+                <div class="kolom2">
+                    <input type="text" name="First name" placeholder="First name"/>
+                    <input type="text" name="Infix" placeholder="Middle name" size="8"/>
+                    <input type="text" name="Surname" placeholder="Last name" size="15"/><br>
+                </div>
+            </div>
+            <div class="rij">
+                <div class="kolom1">Postal code</div>
+                <div class="kolom2">
+                    <input type="text" name="Postcode" placeholder= "1234AB" size="9"/><br>
+                </div>
+            </div>
+            <div class="rij">
+                <div class="kolom1">House number </div>
+                <div class="kolom2">
+                    <input type="text" name="House number" placeholder="Nr." size="5"/>
+                    <input type="text" name="Addition" placeholder= "Addition" size="3"/><br>
+                </div>
+            </div>
+            <div class="rij">
+                <div class="kolom1"> Country </div>
+                <div class="kolom2">
+                    <input id="country" type="text" name="country" size="40" list="countries" />
+                    <datalist id="countries">
+                        <option value="Australia">
+                        <option value="Canada">
+                        <option value="Germany">
+                        <option value="France">
+                        <option value="United Kingdom">   
+                        <option value="United States">
+                    </datalist><br>
+                </div>
+            </div>
+            <div class="rij">
+                <div class="kolom1">Delivery Address </div>
+                <div class="kolom2">
+                    <input type="text"><br>
+                </div>
+            </div>
+            <div class="rij">
+                <div class="kolom1">Email </div>
+                <div class="kolom2">
+                    <input type="email" name="Email" required size="35"/><br>
+                </div>
+            </div>
+            <div class="rij">
+                <div class="kolom1">Phone Number </div>
+                <div class="kolom2">
+                    <input type="number" name="Number" /><br>
+                </div>
+            </div>
+            <div class="rij">
+                <div class="kolom1">Date of birth </div>
+                <div class="kolom2">
+                    <input type="date" name="Date" placeholder="Date"/><br>
+                </div>
+            </div>
+            <div class="rij">
+                <div class="kolom1">Newsletter</div>
+                <div class="kolom2">
+                    <input type="checkbox" id="Newsletter" name="type" value="Newsletter">
+                    <label for="Newsletter">Yes, I would like to receive a 5,- discount on my next product</label>
+                </div>
+            </div>
+                    <div class="coolblue_titel">
+                        <h2>SAVE YOUR DETAILS</h2>
+                        <p>Handy for next time</p>
+            </div>
+                <div class="rij">
+                    <div class="kolom1">Password</div>
+                    <div class="kolom2">
+                        <input type="password" name="Password"/><br>
+                        <label for="Password">At least 6 characters</label>
+                    </div>
+                 </div>     
+             <div class="rij">   
+                <input type="submit"  />
+                   
+                </div>
+            </div>
+        </form>    
+        <footer>
+            <footer>&copy; 2025 Webshop. All rights reserved.</footer>
+        </footer>
+</body>
+</html>
